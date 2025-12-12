@@ -27,12 +27,13 @@ async def on_message(message):
     if "hasina" in message.content.lower():
         await message.channel.send("Did you mean Sanigga?")
     
-    
     if "brat" in message.content.lower():
         await message.channel.send("Brat aint Sigma")
         
     if "hasnat" in message.content.lower():
         await message.channel.send("Hasnat is the real Sigma")
+    if "guzboi" in message.content.lower():
+        await message.channel.send("Yousuf")
     
 if TOKEN:
     bot.run(token=TOKEN)
