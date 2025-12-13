@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands
 import dotenv
 import os
-from .get_response import get_response
 dotenv.load_dotenv(".env")
 
 TOKEN=os.getenv("TOKEN")
@@ -35,10 +34,7 @@ async def on_message(message):
         await message.channel.send("Hasnat is the real Sigma")
     if "guzboi" in message.content.lower():
         await message.channel.send("Yousuf")
-    
-    if bot.user:
-        if bot.user.mentioned_in(message):
-            await message.channel.send(get_response(message.content))
+
     
 if TOKEN:
     bot.run(token=TOKEN)
