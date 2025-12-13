@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import dotenv
 import os
+from .get_response import get_response
 dotenv.load_dotenv(".env")
 
 TOKEN=os.getenv("TOKEN")
@@ -37,7 +38,7 @@ async def on_message(message):
     
     if bot.user:
         if bot.user.mentioned_in(message):
-            await message.channel.send("Did someone mention me?")
+            await message.channel.send(get_response(message.content))
     
 if TOKEN:
     bot.run(token=TOKEN)
