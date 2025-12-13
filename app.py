@@ -35,5 +35,9 @@ async def on_message(message):
     if "guzboi" in message.content.lower():
         await message.channel.send("Yousuf")
     
+    if bot.user:
+        if bot.user.mentioned_in(message):
+            await message.channel.send("Did someone mention me?")
+    
 if TOKEN:
     bot.run(token=TOKEN)
