@@ -21,9 +21,6 @@ async def on_message(message):
     if "chirlie" in message.content.lower() or "kirk" in message.content.lower():
         await message.channel.send("WE ARE CHIRLIE KIRK")
     
-    if "67" in message.content:
-        await message.channel.send("SIX SEVEN")
-    
     if "hasina" in message.content.lower():
         await message.channel.send("Did you mean Sanigga?")
     
